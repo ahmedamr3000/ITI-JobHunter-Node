@@ -12,8 +12,8 @@ import authMiddleware from "../middleware/auth.middleware.js";
 const jobRouter = Router();
 
 jobRouter.post("/create", authMiddleware, createJob);
-jobRouter.get("/", authMiddleware, getAllJobs);
-jobRouter.get("/:id", authMiddleware, getJobById);
+jobRouter.get("/", getAllJobs);
+jobRouter.get("/:id", getJobById);
 jobRouter.put("/update/:id", authMiddleware, updateJob);
 jobRouter.delete("/delete/all", authMiddleware, deleteAllJobs);
 jobRouter.delete("/delete/:id", authMiddleware, deleteJob);
